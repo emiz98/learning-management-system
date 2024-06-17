@@ -14,7 +14,7 @@ import SidebarOption from "../sidebar_option/sidebar_option";
 import { usePathname, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { IUserRole } from "@/interfaces/IUserRole";
-import { LOGO } from "@/lib/constants";
+import { LOGO, LOGO_HORIZONTAL, LOGO_ONLY } from "@/lib/constants";
 import Image from "next/image";
 
 const Sidebar = () => {
@@ -24,18 +24,12 @@ const Sidebar = () => {
 
   return (
     <div className="h-full bg-white drop-shadow-md col-span-2 p-5">
-      <div className="flex items-center justify-start mb-5 gap-x-2">
-        <Image
-          src={LOGO}
-          alt="logo_main"
-          width={40}
-          height={60}
-          priority={true}
-        />
-        <h4 className="font-bold text-accent text-lg hidden md:flex">
-          AcademiX
-        </h4>
-      </div>
+      <img
+        src={LOGO_HORIZONTAL}
+        alt="logo"
+        className="hidden lg:block w-full 2xl:w-2/3"
+      />
+      <img src={LOGO_ONLY} alt="logo" className="lg:hidden w-full" />
       <div className="w-full h-[1px] bg-slate-200 my-5" />
       <SidebarOption
         onClick={() =>
