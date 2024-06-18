@@ -60,10 +60,14 @@ npm run build or yarn build
 ## Demo
 
 User Authentication
+![auth](./videos/auth.gif)
 
-Course Management
+Course and Enrollment Management
+![auth](./videos/course_user.gif)
+![auth](./videos/course_admin.gif)
 
-Enrollment Management
+Student Management
+![auth](./videos/student_admin.gif)
 
 ## License
 
